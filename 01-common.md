@@ -12,6 +12,7 @@
 | redis     | 40.68.153.145 | mmczws.redis.cache.windows.net |
 
 
+```
 info:    Executing command vm list
 + Getting virtual machines                                                     
 data:    ResourceGroupName  Name       ProvisioningState  PowerState  Location    Size          
@@ -22,3 +23,4 @@ data:    MMCZWS             kibana     Succeeded          VM running  westeurope
 data:    MMCZWS             magento01  Succeeded          VM running  westeurope  Standard_A1   
 data:    MMCZWS             magento02  Succeeded          VM running  westeurope  Standard_A1   
 data:    MMCZWS             magentodb  Succeeded          VM running  westeurope  Standard_A1   
+```
