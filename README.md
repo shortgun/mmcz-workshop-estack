@@ -32,3 +32,9 @@ Magento2 to explore: [http://mmczworkshop.westeurope.cloudapp.azure.com](http://
 ![](https://raw.githubusercontent.com/shortgun/mmcz-workshop-estack/master/images/kibana.png)
 
 
+### First commands:
+
+```
+azure login
+azure config mode arm
+```
