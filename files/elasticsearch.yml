@@ -1,0 +1,11 @@
+cluster.name: beats
+node.name: es1
+#path.data: /srv/elasticsearch/data
+#path.logs: /srv/elasticsearch/log
+network.host: _eth0_
+http.port: 9200
+discovery.zen.ping.unicast.hosts: ["10.10.80.7", "10.10.80.8"]
+#
+# Disable starting multiple nodes on a single system:
+#
+node.max_local_storage_nodes: 1

@@ -1,0 +1,25 @@
+filebeat:
+  prospectors:
+    -
+      paths:
+        - "/var/log/httpd/*_log"
+      input_type: log
+      fields_under_root: true
+      document_type: apache
+      scan_frequency: 10s
+    -
+      paths:
+        - "/var/www/html/var/log/debug.log"
+      input_type: log
+      fields_under_root: true
+      document_type: magento
+      scan_frequency: 10s
+  registry_file: /var/lib/filebeat/registry
+output:
+  logstash:
+    hosts: ["170.10.80.7:5044", "170.10.80.7:5044"]
+    index: filebeat
+shipper:
+  tags: ["magento", "workers"]
+logging:
+  files:

@@ -1,0 +1,22 @@
+input:
+  period: 10
+  procs: ["(httpd|mysql)"]
+  stats:
+    system: true
+    proc: true
+    filesystem: true
+    cpu_per_core: false
+output:
+  elasticsearch:
+    hosts: ["10.10.80.7", "10.10.80.8"]
+    index: "topbeat"
+shipper:
+  tags: ["magento", "workers"]
+  refresh_topology_freq: 10
+  topology_expire: 15
+  geoip:
+    paths:
+      - "/usr/share/GeoIP/GeoLiteCity.dat"
+logging:
+  files:
+    rotateeverybytes: 10485760 # = 10MB

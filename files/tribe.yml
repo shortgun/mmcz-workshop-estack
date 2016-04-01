@@ -1,0 +1,8 @@
+cluster.name: beats
+node.name: kibana
+node.data: false
+node.master: false
+network.host: _eth0_
+http.port: 9200
+
+discovery.zen.ping.unicast.hosts: ["10.10.80.7", "10.10.80.8"]
