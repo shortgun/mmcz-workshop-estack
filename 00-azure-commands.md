@@ -13,6 +13,7 @@ azure network lb address-pool create MMCZWS MMCZWSLB backendpool
 azure network lb rule create MMCZWS MMCZWSLB httpbrule -p tcp -f 80 -b 80 -t frontendpool -o backendpool
 azure network lb probe create -g MMCZWS -l MMCZWSLB -n httphealthprobe -p "http" -o 80 -f ping.php -i 30 -c 2
 azure network lb show MMCZWS MMCZWSLB
+```
 
 ## NAT Rules
 ```
@@ -20,6 +21,7 @@ azure network lb inbound-nat-rule create -g MMCZWS -l MMCZWSLB -n ssh01 -p tcp -
 azure network lb inbound-nat-rule create -g MMCZWS -l MMCZWSLB -n ssh02 -p tcp -f 23 -b 22
 ```
 ## Public IP
+
 ```
 azure network public-ip create -g MMCZWS -n MMCZPublicLB -l westeurope -d mmczworkshop -a static -i 4
 
